@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{candidate.name}}
+{% endblock %}
+
+{% block body %}
+    <h1>{{candidate.name}}</h1>
+    <p>Позиция кандидата: {{candidate.position}}</p>
+    <img src = {{candidate.picture}}>
+    <p>Навыки кандидата: {{candidate.skills}}</p>
+{% endblock %}

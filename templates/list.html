@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Все кандидаты
+{% endblock %}
+
+{% block body %}
+  <h1>Все кандидаты</h1>
+  <p>ссылка откроется в новой вкладке</p>
+    {% for name in candidates %}
+      <p><a href="/candidate/{{name.id}}">{{name.name}}</a></p>
+    {% endfor %}
+{% endblock %}

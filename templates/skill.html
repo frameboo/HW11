@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+    Skill
+{% endblock %}
+
+{% block body %}
+<h1>Найдено со скиллом "{{skill}}" - {{counter}}</h1>
+    {% for skills in candidates %}
+        <p><a href="/candidate/{{skills.id}}">{{skills.name}}</a></p>
+    {% endfor %}
+{% endblock %}

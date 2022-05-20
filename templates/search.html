@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Имя кандидата - {{candidate_name}}
+{% endblock %}
+
+{% block body %}
+    <h1>Найдено с именем "{{candidate_name}}" - {{counter}}</h1>
+    {% for name in candidates %}
+        <p><a href="/candidate/{{name.id}}">{{name.name}}</a></p>
+    {% endfor %}
+{% endblock %}
